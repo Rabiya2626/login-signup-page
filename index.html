@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup & Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Signup Section -->
+  <section id="signup" class="container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <div class="input-box">
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-box">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword"
+          placeholder="At least 1 number, 1 lowercase, 1 special char"
+          pattern="^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{6,}$"
+          title="Must contain one number, one lowercase letter, and one special character"
+          required>
+      </div>
+
+      <!-- Error message placeholder -->
+      <p id="signupError" class="error-msg"></p>
+
+      <button type="submit" class="btn">Sign Up</button>
+      <div class="links">
+        <a href="#" id="goToLogin">Already have an account? Login</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-box">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-box">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+      <div class="links">
+        <a href="#" id="goToSignup">Create an Account</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- Welcome Section -->
+  <section id="welcome" class="container">
+    <h2>Welcome to My Webpage </h2>
+    <p>You have successfully logged in.</p>
+    <div class="links">
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
